@@ -71,15 +71,14 @@ public class MainActivity extends AppCompatActivity {
         int average = (num1 + num2 + num3 + num4)/4;
     }
 
-    public void clickbutton2(View view) {
-        int total = (num1 + num2 + num3 + num4)/4;
+    public void clickbutton2(View view) { int average = (num1 + num2 + num3 + num4)/4;
     }
 
     public void clickbutton3(View view) {
-        int total = (num1 + num2 + num3 + num4)/4;
+        int average = (num1 + num2 + num3 + num4)/4;
     }
     public void clickbutton4(View view) {
-        int total = (num1 + num2 + num3 + num4)/4;
+        int average = (num1 + num2 + num3 + num4)/4;
     }
 
     @Override
