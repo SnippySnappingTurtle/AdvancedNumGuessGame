@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="80dp"
             android:layout_marginTop="40dp"
-            android:onClick="clickbutton1"
+            android:onClick="ClickButton1"
             android:text="Button"
             android:visibility="visible"
             app:layout_constraintStart_toStartOf="parent"
@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:layout_marginEnd="80dp"
-            android:onClick="clickbutton2"
+            android:onClick="ClickButton2"
             android:text="Button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="80dp"
             android:layout_marginTop="40dp"
-            android:onClick="clickbutton3"
+            android:onClick="ClickButton3"
             android:text="Button"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button1" />
@@ -56,7 +56,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:layout_marginEnd="80dp"
-            android:onClick="clickbutton4"
+            android:onClick="ClickButton4"
             android:text="Button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button2" />
@@ -80,6 +80,15 @@
             android:text="Pick the average"
             android:textSize="36sp"
             app:layout_constraintBottom_toTopOf="@+id/txtScore"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/startButton"
+            android:layout_width="124dp"
+            android:layout_height="64dp"
+            android:text="Start"
+            app:layout_constraintBottom_toTopOf="@+id/textView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
