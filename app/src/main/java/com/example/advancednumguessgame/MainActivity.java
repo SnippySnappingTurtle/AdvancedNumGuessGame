@@ -40,16 +40,16 @@ public class MainActivity extends AppCompatActivity {
             num4 = r.nextInt(9);
 
 
-        Button b1 = (Button) findViewById(R.id.button1);
+        Button b1 = findViewById(R.id.button1);
         b1.setText("" + num1);
 
-        Button b2 = (Button) findViewById(R.id.button2);
+        Button b2 = findViewById(R.id.button2);
         b2.setText("" + num2);
 
-        Button b3 = (Button) findViewById(R.id.button3);
+        Button b3 = findViewById(R.id.button3);
         b3.setText("" + num3);
 
-        Button b4 = (Button) findViewById(R.id.button4);
+        Button b4 = findViewById(R.id.button4);
         b4.setText("" + num4);
 
 
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Try again!", Toast.LENGTH_SHORT).show();
             }
 
-        TextView txtScore = (TextView) findViewById(R.id.txtScore);
+        TextView txtScore = findViewById(R.id.txtScore);
         txtScore.setText("Score:" + score);
 
         roll();
