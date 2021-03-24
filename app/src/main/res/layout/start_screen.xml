@@ -10,12 +10,15 @@
         android:id="@+id/startButton"
         android:layout_width="124dp"
         android:layout_height="64dp"
-        android:layout_marginBottom="40dp"
+        android:clickable="true"
+        android:onClick="startButton"
         android:text="Start"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.944" />
 
     <TextView
         android:id="@+id/intro"
