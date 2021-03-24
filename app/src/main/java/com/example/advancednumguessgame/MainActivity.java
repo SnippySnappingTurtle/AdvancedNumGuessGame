@@ -84,6 +84,9 @@ public class MainActivity extends AppCompatActivity {
         double rem7 = Math.abs(num7-average);
         double rem8 = Math.abs(num8-average);
 
+        for (int i = 0; i <numOfButtons; i++){
+                int aNumber = new Randon.nextInt()
+        }
         if (rem1 < rem2 && rem1 < rem3 && rem1 < rem4) {
             score++;
             Toast.makeText(this, "Well done!", Toast.LENGTH_SHORT).show();
