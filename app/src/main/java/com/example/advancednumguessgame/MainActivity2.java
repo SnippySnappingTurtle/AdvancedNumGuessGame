@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity2 extends AppCompatActivity {
 
@@ -14,29 +16,38 @@ public class MainActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
     }
-    public void ClickeasyButton(View view) {
-    }
-    public void ClickmediumButton2(View view) {
 
-    }
-    public void ClickhardButton3(View view) {
 
-    }
-
-    public void sendMessage(View view) {
-        //make intent
-        Intent intent = new Intent(this,MainActivity.class);
+    public void startButton(View view) {
+        //make start
+        Intent start = new Intent(this,MainActivity.class);
+        startActivity(start);
 
         //get button choice easyButton mediumButton or hardButton
-        Button be = findViewById(R.id.easyButton);
-        Button bm = findViewById(R.id.mediumButton2);
+        View be = findViewById(R.id.easyButton);
+        be.setEnabled(false);
+        Button be1 = (Button) be;
+        be1.setClickable(true);
+
+        View bm = findViewById(R.id.mediumButton2);
+        be.setEnabled(false);
+        Button bm1 = (Button) bm;
+        bm1.setClickable(true);
+
         Button bh = findViewById(R.id.hardButton3);
+        be.setEnabled(false);
+        Button bh1 = (Button) bh;
+        bh1.setClickable(true);
+
+        TextView t = findViewById(R.id.name);
+        String input = t.getText().toString();
+        Toast.makeText(this,"Welcome" + input, Toast.LENGTH_LONG);
 
 
 
         //move to mainactivity
-        intent.putExtra("Easy", 1);
-        intent.putExtra("Medium", 2);
-        intent.putExtra("Hard", 3);
+        start.putExtra("Easy", 1);
+        start.putExtra("Medium", 2);
+        start.putExtra("Hard", 3);
     }
 }
