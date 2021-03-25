@@ -20,8 +20,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
         //Intent intentRes = getIntent();
         //String Easy intentRes.getStringExtra("Easy");
         //String Medium intentRes.getStringExtra("Medium");
@@ -32,29 +30,28 @@ public class MainActivity extends AppCompatActivity {
     public void runGame(View view) {
         //TODO change these by the activity before //if they select easy 4 boxes range of 9, med 6 and 15, hard 8 and 20
         Intent start = getIntent();
-        String input = start.getStringExtra("Level");
-        int numberOfButtons = new Integer(input);
+        String level = start.getStringExtra("Level");
+        int numberOfButtons = new Integer(level);
         String range = start.getStringExtra("Range");
         int rangeOfNumbers = new Integer(range);
 
         // Array of integers
-        int[] arrayNumber = {};
-
+        int[] arrayNumber = new int[]{};
         for (int i = 0; i < rangeOfNumbers; i++) {
             //make random number
             Random r = new Random();
             int aNumber = r.nextInt(rangeOfNumbers);
 
+
             //todo check if number is duplicated
 
             //get average
             int total = Arrays.stream(arrayNumber).sum();
-            int average = total / numberOfButtons;
-            arrayNumber[i] = aNumber;
-            average += aNumber;
-
-
-            Log.d("success", "Well done!");
+            float average = total / numberOfButtons;
+            if(i < rangeOfNumbers && arrayNumber[i] - average > 0) {
+                Log.d("success", "Well done!");
+            }
+            else
             Log.d("failure", "Try again!");
         }
 

@@ -17,6 +17,7 @@ public class MainActivity2 extends AppCompatActivity {
     private RadioButton easyButton, mediumButton2, hardButton3;
     private Button startButton;
     String input;
+    String level;
     String range;
 
     @Override
@@ -48,21 +49,21 @@ public class MainActivity2 extends AppCompatActivity {
 
 
         if (be.isChecked()) {
-            input = "Easy";
+            level = "Easy";
             range = "Easy";
             Intent start = new Intent(this, MainActivity.class);
             start.putExtra("Level", 4);
             start.putExtra("Range",9);
             startActivity(start);
         } else if (bm.isChecked()) {
-            input = "Medium";
+            level = "Medium";
             range = "Medium";
             Intent start = new Intent(this, MainActivity.class);
             start.putExtra("Level", 6);
             start.putExtra("Range",15);
             startActivity(start);
         } else if (bh.isChecked()) {
-            input = "Hard";
+            level = "Hard";
             range = "Hard";
             Intent start = new Intent(this, MainActivity.class);
             start.putExtra("Level", 8);
