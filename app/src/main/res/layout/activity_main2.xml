@@ -26,38 +26,12 @@
         android:layout_height="119dp"
         android:text="Get ready to guess the average or at least something close to that"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/easyButton"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <RadioButton
-        android:id="@+id/easyButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Easy"
-        app:layout_constraintBottom_toTopOf="@+id/mediumButton2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <RadioButton
-        android:id="@+id/mediumButton2"
-        android:layout_width="85dp"
-        android:layout_height="37dp"
-        android:text="Medium"
-        app:layout_constraintBottom_toTopOf="@+id/hardButton3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.536"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <RadioButton
-        android:id="@+id/hardButton3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hard"
-        app:layout_constraintBottom_toTopOf="@+id/startButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.22" />
 
     <EditText
         android:id="@+id/name"
@@ -65,9 +39,12 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView3"
@@ -77,8 +54,46 @@
         android:textAlignment="textStart"
         android:textColor="#040404"
         android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/intro"
+        app:layout_constraintVertical_bias="0.018" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="97dp"
+        android:layout_height="173dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/intro" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.761">
+
+        <RadioButton
+            android:id="@+id/hardButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hard"
+            tools:layout_editor_absoluteX="349dp"
+            tools:layout_editor_absoluteY="582dp" />
+
+        <RadioButton
+            android:id="@+id/mediumButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Medium"
+            tools:layout_editor_absoluteX="89dp"
+            tools:layout_editor_absoluteY="440dp" />
+
+        <RadioButton
+            android:id="@+id/easyButton"
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:text="Easy"
+            tools:layout_editor_absoluteX="53dp"
+            tools:layout_editor_absoluteY="443dp" />
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

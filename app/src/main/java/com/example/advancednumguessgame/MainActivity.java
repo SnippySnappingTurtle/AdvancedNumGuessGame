@@ -20,19 +20,22 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Intent intentRes = getIntent();
+
+
+        //Intent intentRes = getIntent();
         //String Easy intentRes.getStringExtra("Easy");
         //String Medium intentRes.getStringExtra("Medium");
         //String Hard intentRes.getStringExtra("Hard");
         //todo if string = 1 select easy, if = 2 select medium, if = 3 select hard
-
-
     }
 
     public void runGame(View view) {
         //TODO change these by the activity before //if they select easy 4 boxes range of 9, med 6 and 15, hard 8 and 20
-        int numberOfButtons = 6;
-        int rangeOfNumbers = 9;
+        Intent start = getIntent();
+        String input = start.getStringExtra("Level");
+        int numberOfButtons = new Integer(input);
+        String range = start.getStringExtra("Range");
+        int rangeOfNumbers = new Integer(range);
 
         // Array of integers
         int[] arrayNumber = {};
