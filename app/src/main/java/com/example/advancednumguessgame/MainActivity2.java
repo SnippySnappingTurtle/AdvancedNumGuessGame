@@ -70,15 +70,10 @@ public class MainActivity2 extends AppCompatActivity {
             start.putExtra("Range",20);
             startActivity(start);
         } else             Log.d("failure", "Try again!");{
-
         }
-
-
-        //public void text () {
-            ;
-          //  TextView t = findViewById(R.id.name);
-           // String input = t.getText().toString();
-           // Toast.makeText(this, "Welcome" + input, Toast.LENGTH_LONG);
+            TextView t = findViewById(R.id.name);
+            String input = t.getText().toString();
+           Toast.makeText(this, "Welcome" + input, Toast.LENGTH_LONG);
 
         }
     }

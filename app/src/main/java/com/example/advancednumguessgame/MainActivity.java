@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //Intent intentRes = getIntent();
+        Intent intentRes = getIntent();
         //String Easy intentRes.getStringExtra("Easy");
         //String Medium intentRes.getStringExtra("Medium");
         //String Hard intentRes.getStringExtra("Hard");
